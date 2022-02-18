@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="updateClock()">
+    
+    <div class="aligner">
+        <div class="displayer">
+            <span id="hour" class="big-time">00</span>
+        </div>
+        <span class="big-time trap">:</span>
+        <div class="displayer">
+            <span id="minute" class="big-time">00</span>
+        </div>
+        <span class="big-time trap">:</span>
+        <div class="displayer">
+            <span id="second" class="big-time">00</span>
+        </div>
+    </div>
+
+    <script src="clock.js"></script>
+</body>
+</html>
