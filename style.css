@@ -50,6 +50,10 @@ body {
   .big-time {
     font-size: 50px;
   }
+  
+  .aligner {
+  height: 95vh;
+  }
 }
 
 @media screen and (max-width: 420px) {
