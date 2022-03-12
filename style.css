@@ -6,78 +6,98 @@
 
 body {
   display: flex;
-  background-color: #333;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(image/pexels-oliver-sjöström-931018.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.master-separator {
+  display: flex;
+  flex-direction: row;
 }
 
 .aligner {
-  width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.displayer {
-  background-color: white;
-  width: 120px;
-  padding: 20px;
-  height: 140px;
-  border-radius: 10px;
-  box-shadow: 0px 8px 5px black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px 0 0 20px;
+  padding: 10px;
 }
 
 .big-time {
-  font-family: sans-serif;
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 120px;
+  font-family: "Supermercado One";
+  color: #444;
 }
 
 .trap {
-  color: white;
+  margin: 0 5px;
 }
 
-@media screen and (max-width: 520px) {
-  .displayer {
-    width: 90px;
-    height: 100px;
-  }
-
-  .big-time {
-    font-size: 50px;
-  }
-
-  .aligner {
-    height: 95vh;
-  }
+.analog {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  background-color: #444;
+  padding: 5px;
+  border-radius: 0px 20px 20px 0px;
 }
 
-@media screen and (max-width: 420px) {
-  .displayer {
-    width: 70px;
-    height: 80px;
-  }
-
-  .big-time {
-    font-size: 40px;
-  }
-
-  .aligner {
-    height: 90vh;
-  }
+img {
+  width: 300px;
 }
 
-@media screen and (max-width: 420px) {
-  .displayer {
-    width: 60px;
-    height: 70px;
-  }
+.rotator {
+  width: 300px;
+  height: 300px;
+  background-image: url(image/Clock_10-30.svg);
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .big-time {
-    font-size: 30px;
-  }
+.hands {
+  width: 5px;
+  position: absolute;
+  /* box-shadow: 1px 1px 2px cornflowerblue; */
+}
+
+#hour-hand {
+  border: 3px solid white;
+  transform: rotate(100deg) translatey(-30px);
+  height: 80px;
+  width: 8px;
+  border-radius: 5px;
+  z-index: 3;
+}
+#minute-hand {
+  background-color: white;
+  transform: rotate(30deg) translatey(-40px);
+  height: 100px;
+  z-index: 2;
+}
+#second-hand {
+  background-color: cyan;
+  transform: rotate(0deg) translatey(-45px);
+  width: 2px;
+  height: 120px;
+  z-index: 1;
+}
+
+#center-hand {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  background-color: cyan;
+  border-radius: 50%;
+  z-index: 4;
 }
